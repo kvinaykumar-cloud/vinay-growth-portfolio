@@ -1,0 +1,1173 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f7f7f5;
+    color: #171717;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    background: #f7f7f5;
+    border-bottom: 1px solid #dddddd;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #171717;
+    font-size: 15px;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 24px;
+}
+
+h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+p {
+    max-width: 700px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero > p:first-child {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(48px, 7vw, 86px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.hero > p:nth-of-type(2) {
+    font-size: 20px;
+    color: #555555;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero div {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero a,
+#contact a {
+    display: inline-block;
+    padding: 14px 22px;
+    background: #171717;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.hero a:hover,
+#contact a:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    border-top: 1px solid #dddddd;
+}
+
+#about p {
+    font-size: 19px;
+    color: #555555;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+#work {
+    border-top: 1px solid #dddddd;
+}
+
+article {
+    padding: 30px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+article h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: #555555;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+#services {
+    border-top: 1px solid #dddddd;
+}
+
+#services ul {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+#services li {
+    padding: 25px;
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    border-top: 1px solid #dddddd;
+}
+
+#contact p {
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px 24px;
+    text-align: center;
+    border-top: 1px solid #dddddd;
+    color: #777777;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    #services ul {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   POSITIONING
+========================= */
+
+.positioning {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.positioning p {
+    max-width: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+/* =========================
+   PROJECTS
+========================= */
+
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    font-size: 19px;
+    color: #555555;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-number {
+    font-size: 13px;
+    font-weight: bold;
+    color: #777777;
+    margin-bottom: 50px;
+}
+
+.project-card h3 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.project-category {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.project-card > p:not(.project-number):not(.project-category) {
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.project-card a {
+    margin-top: auto;
+    color: #171717;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    opacity: 0.6;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 260px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-card span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #777777;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin: 45px 0 15px;
+}
+
+.service-card p {
+    color: #555555;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   CASE STUDIES
+========================= */
+
+#case-studies {
+    border-top: 1px solid #dddddd;
+}
+
+.case-study-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.case-study {
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.case-study-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #777777;
+
+    margin-bottom: 35px;
+}
+
+.case-study h3 {
+    max-width: 850px;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.case-study-grid strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.case-study-grid p {
+    color: #555555;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .case-study {
+        padding: 25px;
+    }
+
+    .case-study-top {
+        flex-direction: column;
+    }
+
+    .case-study h3 {
+        font-size: 26px;
+    }
+
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-content > div {
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.about-content h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    color: #555555;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   CONTACT ACTIONS
+========================= */
+
+.contact-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-actions a {
+    display: inline-block;
+    padding: 14px 22px;
+    background: #171717;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.contact-actions a:hover {
+    opacity: 0.8;
+}
+
+.contact-actions .secondary-button {
+    background: white;
+    color: #171717;
+    border: 1px solid #171717;
+}
+/* =========================
+   CASE STUDY PAGE
+========================= */
+
+.case-hero {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.case-hero h1 {
+    max-width: 900px;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.case-hero-intro {
+    max-width: 750px;
+    font-size: 20px;
+    color: #555555;
+}
+
+
+/* =========================
+   CASE OVERVIEW
+========================= */
+
+.case-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.case-overview span {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #777777;
+}
+
+.case-overview h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   CASE SECTIONS
+========================= */
+
+.case-section {
+    border-bottom: 1px solid #dddddd;
+}
+
+.case-section h2 {
+    max-width: 850px;
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.case-section > p {
+    max-width: 750px;
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CASE GRID
+========================= */
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    margin-top: 45px;
+}
+
+.case-grid > div {
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.case-grid strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.case-grid p {
+    color: #555555;
+}
+
+
+/* =========================
+   BLOCKQUOTE
+========================= */
+
+.case-section blockquote {
+    max-width: 850px;
+
+    margin: 35px 0;
+
+    padding: 30px;
+
+    background: white;
+
+    border-left: 4px solid #171717;
+
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   STRATEGY FLOW
+========================= */
+
+.strategy-flow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 45px;
+
+    flex-wrap: wrap;
+}
+
+.strategy-flow div {
+    padding: 18px 22px;
+
+    background: white;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.strategy-flow span {
+    font-size: 24px;
+    color: #777777;
+}
+
+
+/* =========================
+   FUNNEL
+========================= */
+
+.funnel {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+
+    margin-top: 45px;
+}
+
+.funnel > div {
+    background: white;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    padding: 25px;
+}
+
+.funnel span {
+    display: block;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    color: #777777;
+
+    margin-bottom: 25px;
+}
+
+.funnel strong {
+    display: block;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.funnel p {
+    color: #555555;
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.case-back {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.case-back a {
+    color: #171717;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.case-back a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================
+   CASE STUDY MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .case-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .funnel {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .case-hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .case-section h2 {
+        font-size: 36px;
+    }
+
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .strategy-flow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .strategy-flow span {
+        text-align: center;
+    }
+
+}
+.case-study-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #171717;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.case-study-link:hover {
+    opacity: 0.6;
+}
+/* =========================
+   HERO IMPROVEMENT
+========================= */
+
+.hero > p:first-child {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    max-width: 950px;
+    font-size: clamp(52px, 8vw, 96px);
+    line-height: 1;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+}
+
+.hero > p:nth-of-type(2) {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+.hero > div {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero > div a {
+    display: inline-block;
+    padding: 14px 22px;
+    background: #171717;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.hero > div a:last-child {
+    background: white;
+    color: #171717;
+    border: 1px solid #171717;
+}
+
+.hero > div a:hover {
+    opacity: 0.75;
+}
+ /* =========================
+    HEADER IMPROVEMENT
+ ========================= */
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    min-height: 70px;
+}
+
+.logo {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    gap: 28px;
+}
+
+nav ul li a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555555;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #171717;
+}
+/* =========================
+   SELECTED WORK IMPROVEMENT
+========================= */
+
+#work {
+    background: #f7f7f7;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    padding: 32px;
+    min-height: 420px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border-color: #cccccc;
+}
+
+.project-number {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888888;
+}
+
+.project-card h3 {
+    font-size: 27px;
+    line-height: 1.2;
+}
+
+.project-category {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #777777;
+}
+
+.project-card a {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.project-card a:hover {
+    opacity: 0.6;
+}
+ /* =========================
+    CASE STUDIES IMPROVEMENT
+ ========================= */
+
+#case-studies {
+    background: #ffffff;
+}
+
+.case-study {
+    background: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    padding: 40px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.case-study:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.case-study-top span:first-child {
+    color: #171717;
+}
+
+.case-study-top span:last-child {
+    color: #888888;
+}
+
+.case-study h3 {
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.case-study-grid > div {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+
+.case-study-grid > div:hover {
+    border-color: #cccccc;
+}
+
+.case-study-link {
+    margin-top: 35px;
+    font-size: 15px;
+}
+ /* =========================
+    SERVICES IMPROVEMENT
+ ========================= */
+
+#services {
+    background: #f7f7f7;
+}
+
+.services-grid {
+    gap: 18px;
+}
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    padding: 32px;
+    min-height: 280px;
+}
+
+.service-card span {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888888;
+}
+
+.service-card h3 {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-top: 50px;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+.service-card:hover {
+    border-color: #cccccc;
+}
+ /* =========================
+    CONTACT IMPROVEMENT
+ ========================= */
+
+#contact {
+    background: #171717;
+    color: white;
+}
+
+#contact .section-label {
+    color: #aaaaaa;
+}
+
+#contact h2 {
+    color: white;
+    max-width: 750px;
+}
+
+#contact .section-intro {
+    color: #bbbbbb;
+    max-width: 700px;
+}
+
+#contact .contact-actions a {
+    background: white;
+    color: #171717;
+    border: 1px solid white;
+}
+
+#contact .contact-actions .secondary-button {
+    background: transparent;
+    color: white;
+    border: 1px solid #777777;
+}
+
+#contact .contact-actions a:hover {
+    opacity: 0.75;
+}
+ /* =========================
+    ABOUT IMPROVEMENT
+ ========================= */
+
+#about {
+    background: #ffffff;
+}
+
+.about-content {
+    gap: 18px;
+}
+
+.about-content > div {
+    background: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    padding: 32px;
+    min-height: 250px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.about-content > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.about-content h3 {
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.about-content p {
+    line-height: 1.7;
+}
+ /* =========================
+    POSITIONING IMPROVEMENT
+ ========================= */
+
+.positioning {
+    padding: 35px 0;
+    margin-top: 20px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.positioning p {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #555555;
+}
+ /* =========================
+    FOOTER IMPROVEMENT
+ ========================= */
+
+footer {
+    background: #111111;
+    color: #888888;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 13px;
+}
